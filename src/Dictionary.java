@@ -1,9 +1,8 @@
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.LinkedList;
@@ -11,50 +10,55 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 /**
- * Created by brent on 09/12/13.
+ * Created by brent on 02/17/2014 (adapted from StenoTray && StenoDictionary.
  * implements a reverse-lookup steno dictionary, with strokes sorted by stroke-length
  */
 public class Dictionary {
 
     private static final String[] DICTIONARY_TYPES = {".json"};
-    private static final String TAG = "StenoDictionary";
-
 
     private TST<Queue<String>> mDictionary = new TST<Queue<String>>();
-    private SharedPreferences prefs;
 
-    public Dictionary(Context c) {
-        prefs = PreferenceManager.getDefaultSharedPreferences(c);
+    public Dictionary() {
     }
 
-    private OnDictionaryLoadedListener onDictionaryLoadedListener;
-    public interface OnDictionaryLoadedListener {
-        public void onDictionaryLoaded();
-    }
-    public void setOnDictionaryLoadedListener(OnDictionaryLoadedListener listener) {
-        onDictionaryLoadedListener = listener;
-    }
-
-    public void load(String[] filenames, AssetManager assetManager, ProgressBar progressBar, int size) {
-        Log.d(TAG, "loading dictionary");
+    public void load(String[] filenames) {
+        String line, stroke, english;
+        String[] fields;
+        boolean simple= (filenames.length<=1);
+        TST<String> forwardLookup = new TST<String>();
         for (String filename : filenames) {
-            if (filename.contains(".")) {
-                String extension = filename.substring(filename.lastIndexOf("."));
-                if (Arrays.asList(DICTIONARY_TYPES).contains(extension)) {
-                    try {
-                        File file = new File(filename);
-                        if (!file.exists()) {
-                            throw new IOException("Dictionary file could not be found.");
+            if (validateFilename(filename)) {
+                try {
+                    File file = new File(filename);
+                    FileReader reader = new FileReader(file);
+                    BufferedReader lines = new BufferedReader(reader);
+                    while ((line = lines.readLine()) != null) {
+                        fields = line.split("\"");
+                        if ((fields.length > 3) && (fields[3].length() > 0)) {
+                            stroke = fields[1];
+                            english = fields[3];
+                            if (simple) {
+                                addToDictionary(stroke, english);
+                            } else {
+                                forwardLookup.put(stroke, english, false);
+                            }
                         }
-                    } catch (IOException e) {
-                        System.err.println("Dictionary File: "+filename+" could not be found");
                     }
-                } else {
-                    throw new IllegalArgumentException(extension + " is not an accepted dictionary format.");
+                    lines.close();
+                    reader.close();
+                } catch (IOException e) {
+                    System.err.println("Dictionary File: " + filename + " could not be found");
                 }
             }
         }
-        new JsonLoader(assetManager, progressBar, size).execute(filenames);
+        if (!simple) {
+            // Build reverse lookup
+            for (String s : forwardLookup.keys()) {
+                english = forwardLookup.get(s, false);
+                addToDictionary(s, english);
+            }
+        }
     }
 
     public Queue<String> lookup(String english) {
@@ -84,141 +88,33 @@ public class Dictionary {
         mDictionary = new TST<Queue<String>>();
     }
 
-    private class JsonLoader extends AsyncTask<String, Integer, Long> {
-        private int loaded;
-        private int total_size;
-        private ProgressBar progressBar;
-        private int update_interval;
-        private AssetManager assetManager;
-
-        public JsonLoader(AssetManager am, ProgressBar progress, int size) {
-            assetManager = am;
-            progressBar = progress;
-            total_size = size;
-            update_interval = total_size/100;
-            if (update_interval==0)
-                update_interval = 1;
-        }
-
-        protected Long doInBackground(String... filenames) {
-            loaded = 0;
-            progressBar.setProgress(0);
-            boolean simple = (filenames.length<=1); // if there is only 1 dictionary, load in 1 pass
-            if (simple) {
-                Log.d(TAG, "Loading in simple mode");
-            }
-            String line, stroke, english;
-            String[] fields;
-            unload();
-            //if no personal dictionaries are defined, load the default
-            if (filenames.length==0) {
-                try {
-                    InputStream filestream = assetManager.open("dict.json");
-                    InputStreamReader reader = new InputStreamReader(filestream);
-                    BufferedReader lines = new BufferedReader(reader);
-                    while ((line = lines.readLine()) != null) {
-                        fields = line.split("\"");
-                        if ((fields.length > 3) && (fields[3].length() > 0)) {
-                            stroke = fields[1];
-                            english = fields[3];
-                            addToDictionary(stroke, english);
-                            incrementSize();
-                        }
-                    }
-                    lines.close();
-                    reader.close();
-                    filestream.close();
-                } catch (IOException e) {
-                    Log.e(TAG, "Error loading default dictionary asset");
+    private boolean validateFilename(String filename) {
+        if (filename.contains(".")) {
+            String extension = filename.substring(filename.lastIndexOf("."));
+            if (Arrays.asList(DICTIONARY_TYPES).contains(extension)) {
+                File file = new File(filename);
+                if (!file.exists()) {
+                    System.err.println("Dictionary File: "+filename+" could not be found");
+                    return false;
                 }
             } else {
-                TST<String> forwardLookup = new TST<String>();
-                for (String filename : filenames) {
-                    if (!filename.isEmpty()) {
-                        try {
-                            File file = new File(filename);
-                            FileReader reader = new FileReader(file);
-                            BufferedReader lines = new BufferedReader(reader);
-                            while ((line = lines.readLine()) != null) {
-                                fields = line.split("\"");
-                                if ((fields.length > 3) && (fields[3].length() > 0)) {
-                                    stroke = fields[1];
-                                    english = fields[3];
-                                    if (simple) {
-                                        addToDictionary(stroke, english);
-                                    } else {
-                                        forwardLookup.put(stroke, english, false);
-                                    }
-                                    incrementSize();
-                                }
-                            }
-                            lines.close();
-                            reader.close();
-                        } catch (IOException e) {
-                            Log.e(TAG, "Dictionary File: " + filename + " could not be found");
-                        }
-                    }
-                }
-                if (!simple) {
-                    // Build reverse lookup
-                    for (String s : forwardLookup.keys()) {
-                        english = forwardLookup.get(s, false);
-                        addToDictionary(s, english);
-                    }
-                    forwardLookup = null; // garbage collect
-                }
+                System.err.println(extension + " is not an accepted dictionary format.");
+                return false;
             }
-            return (long) loaded;
+        } else {
+            System.err.println("Dictionary file does not have the correct extiension");
+            return false;
         }
-
-        private void addToDictionary(String stroke, String english) {
-            StrokeComparator compareByStrokeLength = new StrokeComparator();
-            Queue<String> strokes = mDictionary.get(english, true);
-            if (strokes == null)
-                strokes = new PriorityQueue<String>(3, compareByStrokeLength);
-            strokes.add(stroke);
-            mDictionary.put(english, strokes, true);
-            incrementSize();
-        }
-
-        private void incrementSize() {
-            loaded++;
-            if (loaded%update_interval==0)
-                onProgressUpdate(loaded);
-        }
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            progressBar.setMax(total_size);
-            progressBar.setProgress(0);
-        }
-
-        @Override
-        protected void onPostExecute(Long result) {
-            super.onPostExecute(result);
-            int size = safeLongToInt(result);
-            SharedPreferences.Editor editor = prefs.edit();
-            editor.putInt(StenoApp.KEY_DICTIONARY_SIZE, size);
-            editor.commit();
-            if (onDictionaryLoadedListener != null)
-                onDictionaryLoadedListener.onDictionaryLoaded();
-        }
-
-        @Override
-        protected void onProgressUpdate(Integer... values) {
-            super.onProgressUpdate(values);
-            progressBar.setProgress(values[0]);
-        }
-
+        return true;
     }
 
-    private static int safeLongToInt(long l) {
-        if (l < Integer.MIN_VALUE || l > Integer.MAX_VALUE) {
-            throw new IllegalArgumentException
-                    (l + " cannot be cast to int without changing its value.");
-        }
-        return (int) l;
+    private void addToDictionary(String stroke, String english) {
+        StrokeComparator compareByStrokeLength = new StrokeComparator();
+        Queue<String> strokes = mDictionary.get(english, true);
+        if (strokes == null)
+            strokes = new PriorityQueue<String>(3, compareByStrokeLength);
+        strokes.add(stroke);
+        mDictionary.put(english, strokes, true);
     }
 
     private class StrokeComparator implements Comparator<String> {

@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9cca743c-b02b-414f-ac7a-98bd1cd33229" name="Default" comment="" />
+    <list default="true" id="9cca743c-b02b-414f-ac7a-98bd1cd33229" name="Default" comment="Adapted Dictionary from StenoTray &amp; stenoDictionary">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BriefTrainer.java" afterPath="$PROJECT_DIR$/src/BriefTrainer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Dictionary.java" afterPath="$PROJECT_DIR$/src/Dictionary.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="BriefTrainer.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -67,17 +72,38 @@
       <file leaf-file-name="BriefTrainer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BriefTrainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-              <folding />
+            <state line="69" column="46" selection-start="2710" selection-end="2710" vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="1955">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1205#1213#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TST.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../StenoDictionary/StenoDictionary/src/main/java/com/brentandjody/stenodictionary/TST.java">
+      <file leaf-file-name="TST.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.7604872" vertical-offset="1301" max-vertical-offset="2907">
-              <folding />
+            <state line="163" column="0" selection-start="5555" selection-end="5555" vertical-scroll-proportion="0.0" vertical-offset="2066" max-vertical-offset="2873">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4037#4045#0" expanded="true" />
+                <element signature="e#4256#4264#0" expanded="true" />
+                <element signature="e#4972#4980#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dictionary.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Dictionary.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="83" column="15" selection-start="2938" selection-end="2938" vertical-scroll-proportion="0.33264887" vertical-offset="1249" max-vertical-offset="2499">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#813#821#0" expanded="true" />
+                <element signature="e#2476#2484#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,10 +115,20 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="BrentN" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/src/TST.java" />
         <option value="$PROJECT_DIR$/src/BriefTrainer.java" />
+        <option value="$PROJECT_DIR$/src/Dictionary.java" />
       </list>
     </option>
   </component>
@@ -101,7 +137,7 @@
     <option name="width" value="1400" />
     <option name="height" value="860" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -175,7 +211,8 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../StenoDictionary/StenoDictionary/src/main/java/com/brentandjody/stenodictionary/TST.java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../StenoDictionary/StenoDictionary/src/main/java/com/brentandjody/stenodictionary/Dictionary.java" />
+    <property name="recentsLimit" value="5" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
@@ -312,6 +349,23 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="9cca743c-b02b-414f-ac7a-98bd1cd33229" name="Default" comment="" />
@@ -334,6 +388,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32941177" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -360,22 +415,65 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Adapted Dictionary from StenoTray &amp; stenoDictionary" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adapted Dictionary from StenoTray &amp; stenoDictionary" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/BriefTrainer.java">
+    <entry file="file://$PROJECT_DIR$/../StenoDictionary/StenoDictionary/src/main/java/com/brentandjody/stenodictionary/TST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-          <folding />
+        <state line="166" column="0" selection-start="52" selection-end="5608" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2924">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../StenoDictionary/StenoDictionary/src/main/java/com/brentandjody/stenodictionary/TST.java">
+    <entry file="file://$PROJECT_DIR$/../StenoDictionary/StenoDictionary/src/main/java/com/brentandjody/stenodictionary/Dictionary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.7604872" vertical-offset="1301" max-vertical-offset="2907">
-          <folding />
+        <state line="2" column="0" selection-start="43" selection-end="9699" vertical-scroll-proportion="0.040595397" vertical-offset="4" max-vertical-offset="4403">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="163" column="0" selection-start="5555" selection-end="5555" vertical-scroll-proportion="0.0" vertical-offset="2066" max-vertical-offset="2873">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4037#4045#0" expanded="true" />
+            <element signature="e#4256#4264#0" expanded="true" />
+            <element signature="e#4972#4980#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BriefTrainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="46" selection-start="2710" selection-end="2710" vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="1955">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1205#1213#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dictionary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="15" selection-start="2938" selection-end="2938" vertical-scroll-proportion="0.33264887" vertical-offset="1249" max-vertical-offset="2499">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#813#821#0" expanded="true" />
+            <element signature="e#2476#2484#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
