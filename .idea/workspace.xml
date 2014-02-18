@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9cca743c-b02b-414f-ac7a-98bd1cd33229" name="Default" comment="Adapted Dictionary from StenoTray &amp; stenoDictionary">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BriefTrainer.java" afterPath="$PROJECT_DIR$/src/BriefTrainer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Dictionary.java" afterPath="$PROJECT_DIR$/src/Dictionary.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="9cca743c-b02b-414f-ac7a-98bd1cd33229" name="Default" comment="Working">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/com/brentandjody/BriefTrainer/DictionaryTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/brentandjody/BriefTrainer/LogFile.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/canadian.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/dict.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="MOVED" beforePath="C:\Develop\Projects\Managed\BriefTrainer\src\BriefTrainer.java" afterPath="$PROJECT_DIR$/src/com/brentandjody/BriefTrainer/BriefTrainer.java" />
+      <change type="MOVED" beforePath="C:\Develop\Projects\Managed\BriefTrainer\src\Dictionary.java" afterPath="$PROJECT_DIR$/src/com/brentandjody/BriefTrainer/Dictionary.java" />
+      <change type="MOVED" beforePath="C:\Develop\Projects\Managed\BriefTrainer\src\TST.java" afterPath="$PROJECT_DIR$/src/com/brentandjody/BriefTrainer/TST.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BriefTrainer.iml" afterPath="$PROJECT_DIR$/BriefTrainer.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BriefTrainer.iws" />
@@ -60,6 +66,38 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/tests/com/brentandjody/BriefTrainer/DictionaryTest.java" line="15" class="com.brentandjody.BriefTrainer.DictionaryTest" package="com.brentandjody.BriefTrainer">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/brentandjody/BriefTrainer/BriefTrainer.java" line="154" class="com.brentandjody.BriefTrainer.BriefTrainer" package="com.brentandjody.BriefTrainer">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -69,41 +107,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BriefTrainer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BriefTrainer.java">
+      <file leaf-file-name="BriefTrainer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/brentandjody/BriefTrainer/BriefTrainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="46" selection-start="2710" selection-end="2710" vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="1955">
+            <state line="118" column="20" selection-start="4922" selection-end="4922" vertical-scroll-proportion="0.43991855" vertical-offset="1773" max-vertical-offset="3808">
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1205#1213#0" expanded="true" />
+                <element signature="e#255#266#0" expanded="true" />
+                <element signature="e#341#357#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TST.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TST.java">
+      <file leaf-file-name="LogFile.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/brentandjody/BriefTrainer/LogFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="163" column="0" selection-start="5555" selection-end="5555" vertical-scroll-proportion="0.0" vertical-offset="2066" max-vertical-offset="2873">
+            <state line="56" column="9" selection-start="1462" selection-end="1462" vertical-scroll-proportion="0.0" vertical-offset="806" max-vertical-offset="1598">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4037#4045#0" expanded="true" />
-                <element signature="e#4256#4264#0" expanded="true" />
-                <element signature="e#4972#4980#0" expanded="true" />
+                <element signature="method#getTranslation#0;class#LogFile#0" expanded="true" />
+                <element signature="method#getStrokes#0;class#LogFile#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dictionary.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Dictionary.java">
+      <file leaf-file-name="Dictionary.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/brentandjody/BriefTrainer/Dictionary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="15" selection-start="2938" selection-end="2938" vertical-scroll-proportion="0.33264887" vertical-offset="1249" max-vertical-offset="2499">
+            <state line="95" column="0" selection-start="3522" selection-end="3522" vertical-scroll-proportion="0.0" vertical-offset="704" max-vertical-offset="2380">
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#813#821#0" expanded="true" />
-                <element signature="e#2476#2484#0" expanded="true" />
+                <element signature="e#733#741#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DictionaryTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/com/brentandjody/BriefTrainer/DictionaryTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="37" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -129,13 +173,18 @@
         <option value="$PROJECT_DIR$/src/TST.java" />
         <option value="$PROJECT_DIR$/src/BriefTrainer.java" />
         <option value="$PROJECT_DIR$/src/Dictionary.java" />
+        <option value="$PROJECT_DIR$/src/com/brentandjody/BriefTrainer/Dictionary.java" />
+        <option value="$PROJECT_DIR$/tests/com/brentandjody/BriefTrainer/DictionaryTest.java" />
+        <option value="$PROJECT_DIR$/src/com/brentandjody/BriefTrainer/LogFile.java" />
+        <option value="$PROJECT_DIR$/src/com/brentandjody/BriefTrainer/BriefTrainer.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="860" />
+    <option name="x" value="-4" />
+    <option name="y" value="-4" />
+    <option name="width" value="1448" />
+    <option name="height" value="864" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -163,6 +212,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -194,11 +245,13 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BriefTrainer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -213,8 +266,76 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../StenoDictionary/StenoDictionary/src/main/java/com/brentandjody/stenodictionary/Dictionary.java" />
     <property name="recentsLimit" value="5" />
+    <property name="LayoutCode.rearrangeEntries" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.brentandjody.BriefTrainer" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Develop\Projects\Managed\BriefTrainer\assets" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.BriefTrainer">
+    <configuration default="false" name="All in BriefTrainer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BriefTrainer" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="BriefTrainer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.brentandjody.BriefTrainer.BriefTrainer" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="BriefTrainer" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -249,19 +370,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -287,6 +395,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -342,7 +463,16 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <list size="0" />
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.All in BriefTrainer" />
+      <item index="1" class="java.lang.String" itemvalue="Application.BriefTrainer" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Application.BriefTrainer" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.All in BriefTrainer" />
+      </list>
+    </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -372,33 +502,38 @@
       <created>1392663566801</created>
       <updated>1392663566801</updated>
     </task>
+    <task id="LOCAL-00001" summary="Adapted Dictionary from StenoTray &amp; stenoDictionary">
+      <created>1392673389490</created>
+      <updated>1392673389490</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="20" y="0" width="1400" height="860" extended-state="0" />
+    <frame x="-4" y="-4" width="1448" height="864" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899868" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32941177" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39921975" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32769832" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32769832" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24930556" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32769832" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
@@ -416,7 +551,9 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Adapted Dictionary from StenoTray &amp; stenoDictionary" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adapted Dictionary from StenoTray &amp; stenoDictionary" />
+    <MESSAGE value="Number of strokes now accurate" />
+    <MESSAGE value="Working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -426,53 +563,89 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../StenoDictionary/StenoDictionary/src/main/java/com/brentandjody/stenodictionary/TST.java">
+    <entry file="file://$PROJECT_DIR$/src/com/brentandjody/BriefTrainer/BriefTrainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="0" selection-start="52" selection-end="5608" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2924">
+        <state line="71" column="46" selection-start="2750" selection-end="2750" vertical-scroll-proportion="0.0" vertical-offset="1139" max-vertical-offset="1989">
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#255#266#0" expanded="true" />
+            <element signature="e#341#357#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/brentandjody/BriefTrainer/TST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="165" column="0" selection-start="5715" selection-end="5715" vertical-scroll-proportion="0.0" vertical-offset="2100" max-vertical-offset="2907">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/brentandjody/BriefTrainer/Dictionary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="2448">
+          <folding>
+            <element signature="e#733#741#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/com/brentandjody/BriefTrainer/DictionaryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="5" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../StenoDictionary/StenoDictionary/src/main/java/com/brentandjody/stenodictionary/TST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="166" column="0" selection-start="52" selection-end="5608" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2924" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../StenoDictionary/StenoDictionary/src/main/java/com/brentandjody/stenodictionary/Dictionary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="43" selection-end="9699" vertical-scroll-proportion="0.040595397" vertical-offset="4" max-vertical-offset="4403">
+        <state line="2" column="0" selection-start="43" selection-end="9699" vertical-scroll-proportion="0.040595397" vertical-offset="4" max-vertical-offset="4403" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/brentandjody/BriefTrainer/TST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="165" column="0" selection-start="5715" selection-end="5715" vertical-scroll-proportion="0.0" vertical-offset="2100" max-vertical-offset="2907">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/brentandjody/BriefTrainer/Dictionary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="0" selection-start="3522" selection-end="3522" vertical-scroll-proportion="0.0" vertical-offset="704" max-vertical-offset="2380">
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#733#741#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TST.java">
+    <entry file="file://$PROJECT_DIR$/tests/com/brentandjody/BriefTrainer/DictionaryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="163" column="0" selection-start="5555" selection-end="5555" vertical-scroll-proportion="0.0" vertical-offset="2066" max-vertical-offset="2873">
+        <state line="7" column="37" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/brentandjody/BriefTrainer/LogFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="9" selection-start="1462" selection-end="1462" vertical-scroll-proportion="0.0" vertical-offset="806" max-vertical-offset="1598">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4037#4045#0" expanded="true" />
-            <element signature="e#4256#4264#0" expanded="true" />
-            <element signature="e#4972#4980#0" expanded="true" />
+            <element signature="method#getTranslation#0;class#LogFile#0" expanded="true" />
+            <element signature="method#getStrokes#0;class#LogFile#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BriefTrainer.java">
+    <entry file="file://$PROJECT_DIR$/src/com/brentandjody/BriefTrainer/BriefTrainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="46" selection-start="2710" selection-end="2710" vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="1955">
+        <state line="118" column="20" selection-start="4922" selection-end="4922" vertical-scroll-proportion="0.43991855" vertical-offset="1773" max-vertical-offset="3808">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1205#1213#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dictionary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="15" selection-start="2938" selection-end="2938" vertical-scroll-proportion="0.33264887" vertical-offset="1249" max-vertical-offset="2499">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#813#821#0" expanded="true" />
-            <element signature="e#2476#2484#0" expanded="true" />
+            <element signature="e#255#266#0" expanded="true" />
+            <element signature="e#341#357#0" expanded="true" />
           </folding>
         </state>
       </provider>

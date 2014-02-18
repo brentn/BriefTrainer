@@ -1,12 +1,14 @@
+package com.brentandjody.BriefTrainer;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
 /**
  * Created by brent on 16/10/13.
  *
- *  This is the data structure that holds the main Dictionary.
+ *  This is the data structure that holds the main com.brentandjody.BriefTrainer.Dictionary.
  *  Symbol table with string keys, implemented using a ternary search
- *  trie (TST).
+ *  trie (com.brentandjody.BriefTrainer.TST).
  *
  *  Remarks
  *  --------
@@ -17,7 +19,7 @@ import java.util.Queue;
 
 public class TST<Value> {
     private int N;       // size
-    private Node root;   // root of TST
+    private Node root;   // root of com.brentandjody.BriefTrainer.TST
 
     private class Node {
         private char c;                 // character
@@ -95,7 +97,7 @@ public class TST<Value> {
 
 
     /**************************************************************
-     * Find and return longest prefix of s in TST
+     * Find and return longest prefix of s in com.brentandjody.BriefTrainer.TST
      **************************************************************/
     public String longestPrefixOf(String s) {
         if (s == null || s.length() == 0) return null;

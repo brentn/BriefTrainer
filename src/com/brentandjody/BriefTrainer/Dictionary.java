@@ -1,13 +1,10 @@
+package com.brentandjody.BriefTrainer;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.LinkedList;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * Created by brent on 02/17/2014 (adapted from StenoTray && StenoDictionary.
@@ -48,7 +45,7 @@ public class Dictionary {
                     lines.close();
                     reader.close();
                 } catch (IOException e) {
-                    System.err.println("Dictionary File: " + filename + " could not be found");
+                    System.err.println("com.brentandjody.BriefTrainer.Dictionary File: " + filename + " could not be found");
                 }
             }
         }
@@ -94,7 +91,7 @@ public class Dictionary {
             if (Arrays.asList(DICTIONARY_TYPES).contains(extension)) {
                 File file = new File(filename);
                 if (!file.exists()) {
-                    System.err.println("Dictionary File: "+filename+" could not be found");
+                    System.err.println("com.brentandjody.BriefTrainer.Dictionary File: "+filename+" could not be found");
                     return false;
                 }
             } else {
@@ -102,7 +99,7 @@ public class Dictionary {
                 return false;
             }
         } else {
-            System.err.println("Dictionary file does not have the correct extiension");
+            System.err.println("com.brentandjody.BriefTrainer.Dictionary file does not have the correct extiension");
             return false;
         }
         return true;

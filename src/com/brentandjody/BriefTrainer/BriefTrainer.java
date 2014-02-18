@@ -1,6 +1,7 @@
+package com.brentandjody.BriefTrainer;
+
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by brentn on 17/02/14.
@@ -9,6 +10,8 @@ import java.util.List;
 public class BriefTrainer {
 
     private static boolean DEBUG = true;
+    private static List<Candidate> candidates = new ArrayList<Candidate>();
+    private static List<Recommendation> recommendations = new ArrayList<Recommendation>();
 
     // find the default location of the plover config directory
     private static final String PSEP       = System.getProperty("file.separator");
@@ -95,15 +98,122 @@ public class BriefTrainer {
     }
 
     public static void main(String[] arguments) {
-        Dictionary dictionary = new Dictionary();
+        dictionary = new Dictionary();
         try {
             readConfig();
+            dictionary.load(dictionaryFiles.toArray(new String[dictionaryFiles.size()]));
+            assert(dictionary.size()>0);
         } catch (FileNotFoundException e) {
             System.err.println("Error: could not locate Plover config file.");
         }
-        dictionary.load(dictionaryFiles.toArray(new String[dictionaryFiles.size()]));
+        LogFile log = new LogFile(logFile);
+        String[] logline;
+        int i=0;
+        while (log.isReady()) {
+            log.read();
+            i++;
+            if (log.getStrokes()!=0) {
+                process(log.getStrokes(), log.getTranslation());
+            }
+        }
+        log.close();
+        Collections.sort(recommendations);
+        for (Recommendation r : recommendations) {
+            System.out.println(r.occurrences()+" times -> "+r.stroke()+" : "+r.translation());
+        }
     }
 
+    private static void process(int strokes, String translation) {
+        //add or remove strokes from candidates
+        //System.out.println(candidates.size()+" : "+strokes+" : "+translation);
+        Candidate candidate;
+        for (Iterator<Candidate> iterator = candidates.iterator(); iterator.hasNext();) {
+            candidate = iterator.next();
+            candidate.addWord(strokes, translation);
+            Queue<String> lookup = dictionary.lookup(candidate.translation());
+            if (lookup==null || lookup.isEmpty()) {
+                iterator.remove();
+            } else {
+                if (numberOfStrokes(lookup.peek()) < candidate.strokes()) {
+                    Recommendation recommendation = findRecommendation(lookup.peek());
+                    if (recommendation == null)
+                        recommendations.add(new Recommendation(1, lookup.peek(), candidate.translation));
+                    else
+                        recommendation.addOccurrence();
+                }
+            }
+        }
+        candidates.add(new Candidate(strokes, translation));
+    }
+
+    private static int numberOfStrokes(String seriesOfStrokes) {
+        return seriesOfStrokes.split("/").length;
+    }
+
+    private static Recommendation findRecommendation(String stroke) {
+        for (Recommendation r : recommendations) {
+            if (r.equals(stroke)) return r;
+        }
+        return null;
+    }
+
+    static class Candidate {
+        private int strokes=0;
+        private String translation="";
+
+        public Candidate(int strokes, String translation) {
+            this.strokes = strokes;
+            this.translation = translation;
+        }
+
+        public int strokes() {return strokes;}
+        public String translation() {return translation;}
+
+        public void addWord(int strokes, String word) {
+            this.strokes+= strokes;
+            if (strokes < 1) {
+                int end = this.translation.lastIndexOf(word);
+                if (end >= 0)
+                    this.translation = this.translation.substring(0, end).trim();
+            }
+            if (!this.translation.isEmpty())
+                this.translation+=" ";
+            this.translation+=word;
+        }
+    }
+
+    static class Recommendation implements Comparable<Recommendation>{
+        private int occurrences=0;
+        private String stroke="";
+        private String translation="";
+
+        public Recommendation(int occurrences, String stroke, String translation) {
+            this.occurrences = occurrences;
+            this.stroke = stroke;
+            this.translation = translation;
+        }
+
+        public boolean equals(String stroke) {
+            if (stroke == null) return false;
+            return (this.stroke().equals(stroke));
+        }
+
+        public void addOccurrence() {
+            this.occurrences++;
+        }
+
+        public int occurrences() {return occurrences;}
+        public String stroke() {return stroke;}
+        public String translation() {return translation;}
+
+        @Override
+        public int compareTo(Recommendation that) {
+            if (that==null) return -1;
+            if (this.occurrences>that.occurrences()) return -1;
+            if (this.occurrences<that.occurrences()) return 1;
+            return 0;
+        }
+    }
 
 }
 
